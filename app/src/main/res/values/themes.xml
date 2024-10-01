@@ -3,4 +3,6 @@
     <style name="Base.Theme.MyPPoker2" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
     </style>
+    <style name="Theme.MyPPoker2" parent="Base.Theme.MyPPoker2" />
+
 </resources>
