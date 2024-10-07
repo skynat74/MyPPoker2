@@ -19,11 +19,15 @@ abstract class CardAdapter(private val context: Context): RecyclerView.Adapter<C
     }
 
     abstract fun onClickListener(view: View)
+    abstract fun onLongClickListener(view: View): Boolean
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_card, parent, false)
         view.setOnClickListener() {
             onClickListener(view)
+        }
+        view.setOnLongClickListener() {
+            onLongClickListener(view)
         }
         return CardHolder(view)
     }
