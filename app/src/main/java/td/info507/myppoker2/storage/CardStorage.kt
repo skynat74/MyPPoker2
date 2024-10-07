@@ -1,6 +1,7 @@
 import android.content.Context
 import android.content.SharedPreferences
 import td.info507.myppoker2.model.Card
+import td.info507.myppoker2.storage.CardDataBaseStorage
 import td.info507.myppoker2.storage.CardJSONFileStorage
 import td.info507.myppoker2.storage.CardNoneStorage
 import td.info507.myppoker2.storage.Storage
@@ -36,7 +37,7 @@ object CardStorage {
         var storage: Storage<Card> = CardNoneStorage()
         when (getStorage(context)) {
             NONE -> storage = CardNoneStorage()
-            // DATA_BASE -> storage = CardDataBaseStorage(context)
+            DATA_BASE -> storage = CardDataBaseStorage(context)
             FILE_JSON -> storage = CardJSONFileStorage(context)
         }
         return storage

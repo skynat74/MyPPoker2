@@ -7,9 +7,10 @@ import android.os.Bundle
 import android.widget.EditText
 import androidx.fragment.app.DialogFragment
 import td.info507.myppoker2.R
+import td.info507.myppoker2.activity.Updatable
 import td.info507.myppoker2.model.Card
 
-class CardDialogFragment: DialogFragment() {
+class CardDialogFragment(private val updatable: Updatable): DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val view = requireActivity().layoutInflater.inflate(R.layout.dialog_card, null)
         return AlertDialog.Builder(context)
@@ -24,6 +25,7 @@ class CardDialogFragment: DialogFragment() {
                     view.findViewById<EditText>(R.id.card_color).text.toString(),
                 )
             )
+            updatable.update()
         }
         .setNegativeButton(R.string.dialog_cancel, null)
         .create()
