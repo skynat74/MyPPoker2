@@ -49,10 +49,6 @@ class MainActivity : Updatable, AppCompatActivity() {
             CardRequest(applicationContext, this)
         }
 
-        findViewById<SwipeRefreshLayout>(R.id.card_refresh).setOnRefreshListener {
-            CardRequest(applicationContext, this)
-        }
-
         findViewById<FloatingActionButton>(R.id.add_card).setOnClickListener() {
             CardDialogFragment(this).show(supportFragmentManager, null)
         }
