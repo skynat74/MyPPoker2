@@ -13,4 +13,8 @@
     <string name="storage_none">Storage None</string>
     <string name="storage_data_base">Data base</string>
     <string name="storage_file_json">JSON</string>
+
+    <string name="success">Les cartes ont bien été récupérées</string>
+    <string name="error">Les cartes n ont pas bien été récupérées</string>
+    <string name="addcard">addCard</string>
 </resources>
